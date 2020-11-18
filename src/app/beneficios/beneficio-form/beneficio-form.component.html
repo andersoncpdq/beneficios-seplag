@@ -1,0 +1,33 @@
+<h2>{{ title }}</h2>
+<hr />
+
+<section id="form">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Nome:</label>
+            <input type="text" [(ngModel)]="beneficio.nome" name="nome" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+            <br>
+            <label>CPF:</label>
+            <input type="text" [(ngModel)]="beneficio.cpf" name="cpf" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+            <br>
+            <label>Órgão:</label>
+            <input type="text" [(ngModel)]="beneficio.orgao" name="orgao" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+            <br>
+            <label>Matrícula:</label>
+            <input type="text" [(ngModel)]="beneficio.matricula" name="matricula" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+            <br>
+            <label>Tipo:</label>
+            <select class="custom-select" [(ngModel)]="beneficio.tipo" name="tipo">
+                <option value="1">Identificação</option>
+                <option value="2">Vida Funcional</option>
+                <option value="3">Contagem de Tempo</option>
+                <option value="4">Remuneração/Proventos</option>
+            </select>
+            <br>
+            <label>Arquivo:</label>
+            <input type="file" [(ngModel)]="beneficio.arquivoPDF" name="arquivoPDF" (change)="fileEventChange($event)" class="form-control-file" accept=".pdf">
+        </div>
+        <button type="submit" class="btn btn-primary mr-2">Salvar</button>
+        <button type="button" class="btn btn-secondary" [routerLink]="['']">Cancelar</button>
+    </form>
+</section>
