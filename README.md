@@ -27,6 +27,6 @@ Tela de visualização do documento PDF:
 
 ![Screenshot](imagens/3.jpg)
 
-Tela processamento e visualização de tramitações:
+Tela de processamento e visualização de tramitações:
 
 ![Screenshot](imagens/4.jpg)
