@@ -9,10 +9,24 @@ Esse projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli
 
 Execute o comando `ng serve` e navegue (preferencialmente com o Google Chrome) em `http://localhost:4200/`.
 
-## Como fazer Build
-
-Execute o comando `ng build` para montar o projeto. Os arquivos de build estarão armazenados no diretório `dist/`.
-
-## Armazenamento
+## Armazenamento de Dados
 
 Para fins de simplificação, foi utilizado o `Local Storage` do próprio navegador como simulação de base de dados.
+
+## Imagens
+
+Tela de listagem de beneficiários:
+
+![Screenshot](imagens/1.jpg)
+
+Tela de cadastro de beneficiários:
+
+![Screenshot](imagens/2.jpg)
+
+Tela de visualização do documento PDF:
+
+![Screenshot](imagens/3.jpg)
+
+Tela processamento e visualização de tramitações:
+
+![Screenshot](imagens/4.jpg)
