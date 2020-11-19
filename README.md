@@ -1,27 +1,18 @@
-# BeneficiosSeplag
+# Beneficios Aposentadoria SEPLAC-CE
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.1.
+Esta aplicação simula a criação de diferentes tipos de benefícios de aposentadoria para servidores públicos.
+É possivel anexar documentos e tramitar o processo para outros setores.
 
-## Development server
+Esse projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 11.0.1.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Como Executar
 
-## Code scaffolding
+Execute o comando `ng serve` e navegue (preferencialmente com o Google Chrome) em `http://localhost:4200/`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Como fazer Build
 
-## Build
+Execute o comando `ng build` para montar o projeto. Os arquivos de build estarão armazenados no diretório `dist/`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Armazenamento
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Para fins de simplificação, foi utilizado o `Local Storage` do próprio navegador como simulação de base de dados.
