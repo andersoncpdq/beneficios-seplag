@@ -1,0 +1,53 @@
+<h2>Tramitação</h2>
+<hr />
+
+<section>
+    <form (ngSubmit)="tramitar()">
+        <div class="form-group">
+            <label>Local Origem:</label>
+            <select class="custom-select" [(ngModel)]="origem" name="origem">
+                <option value="1">Setorial Servidor</option>
+                <option value="2">Cprev Gestor</option>
+                <option value="3">Secretário Seplag</option>
+                <option value="4">PGE - Análise</option>
+                <option value="5">TCE - Gestor</option>
+            </select>
+            <br>
+            <label>Local Destino:</label>
+            <select class="custom-select" [(ngModel)]="destino" name="destino">
+                <option value="1">Setorial Servidor</option>
+                <option value="2">Cprev Gestor</option>
+                <option value="3">Secretário Seplag</option>
+                <option value="4">PGE - Análise</option>
+                <option value="5">TCE - Gestor</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary mr-2">Tramitar</button>
+        <button type="button" class="btn btn-secondary" [routerLink]="['']">Voltar</button>
+    </form>
+</section>
+
+<br>
+
+<section>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Data Tramitação</th>
+                <th scope="col">Local Origem</th>
+                <th scope="col">Local Destino</th>
+                <th scope="col">Usuário</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let tramite of tramites">
+                <th scope="row">{{ tramite.id }}</th>
+                <td>{{ tramite.dataTramite }}</td>
+                <td>{{ tramite.origem }}</td>
+                <td>{{ tramite.destino }}</td>
+                <td>{{ tramite.usuario }}</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
