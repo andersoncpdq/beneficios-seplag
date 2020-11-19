@@ -1,4 +1,4 @@
-# Beneficios Aposentadoria SEPLAC-CE
+# Beneficios de Aposentadoria SEPLAG-CE
 
 Esta aplicação simula a criação de diferentes tipos de benefícios de aposentadoria para servidores públicos.
 É possivel anexar documentos e tramitar o processo para outros setores.
