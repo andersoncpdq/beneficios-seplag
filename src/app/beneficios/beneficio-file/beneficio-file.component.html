@@ -1,13 +1,16 @@
 <h2>{{ title }}</h2>
 <hr />
 
-<div>
-    <ul>
-        <li>
-            <a (click)="previewPDF(beneficio)" href="javascript:void(0)">
-                <span>{{ beneficio.tipo }}</span>
-            </a>
-        </li>
-    </ul>
+<section>
+    <ngx-extended-pdf-viewer
+        [base64Src]="base64"
+        backgroundColor="#ffffff"
+        [height]="'90vh'"
+        [useBrowserLocale]="true"
+        [handTool]="false"
+        [showHandToolButton]="true"
+    >
+    </ngx-extended-pdf-viewer>
+    <br>
     <button type="button" class="btn btn-secondary" [routerLink]="['']">Voltar</button>
-</div>
+</section>

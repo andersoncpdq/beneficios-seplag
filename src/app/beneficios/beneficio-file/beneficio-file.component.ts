@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { MatDialog } from '@angular/material/dialog';
 
 import { Beneficio } from 'src/app/models/beneficio';
 import { BeneficioService } from 'src/app/services/beneficio.service';
-import { PdfViewerComponent } from 'src/app/pdf-viewer/pdf-viewer.component';
 
 @Component({
   selector: 'app-beneficio-file',
@@ -15,11 +13,11 @@ export class BeneficioFileComponent implements OnInit {
 
   title: string = 'Arquivo';
   beneficio: Beneficio = new Beneficio();
+  base64: any;
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private beneficioService: BeneficioService,
-    public dialog: MatDialog
+    private beneficioService: BeneficioService
   ) { }
 
   ngOnInit(): void {
@@ -27,15 +25,7 @@ export class BeneficioFileComponent implements OnInit {
     if(id) {
       this.beneficio = this.beneficioService.getById(parseInt(id));
     }
-  }
-
-  previewPDF(beneficio: Beneficio) {
-    this.dialog.open(PdfViewerComponent, {
-      width: "80%",
-      data: {
-        pdfData: beneficio.arquivoPDF
-      }
-    });
+    this.base64 = this.beneficio.arquivoPDF;
   }
 
 }
