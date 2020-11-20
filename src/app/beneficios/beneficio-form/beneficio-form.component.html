@@ -2,22 +2,22 @@
 <hr />
 
 <section id="form">
-    <form (ngSubmit)="onSubmit()">
+    <form #formBeneficio="ngForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
             <label>Nome:</label>
-            <input type="text" [(ngModel)]="beneficio.nome" name="nome" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+            <input type="text" name="nome" id="nome" [(ngModel)]="beneficio.nome" #nome="ngModel" required class="form-control" aria-label="Username" aria-describedby="basic-addon1">
             <br>
             <label>CPF:</label>
-            <input type="text" [(ngModel)]="beneficio.cpf" name="cpf" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+            <input type="text" name="cpf" id="cpf" [(ngModel)]="beneficio.cpf" #cpf="ngModel" required class="form-control" aria-label="Username" aria-describedby="basic-addon1">
             <br>
             <label>Órgão:</label>
-            <input type="text" [(ngModel)]="beneficio.orgao" name="orgao" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+            <input type="text" name="orgao" id="orgao" [(ngModel)]="beneficio.orgao" #orgao="ngModel" required class="form-control" aria-label="Username" aria-describedby="basic-addon1">
             <br>
             <label>Matrícula:</label>
-            <input type="text" [(ngModel)]="beneficio.matricula" name="matricula" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+            <input type="text" name="matricula" id="matricula" [(ngModel)]="beneficio.matricula" #matricula="ngModel" required class="form-control" aria-label="Username" aria-describedby="basic-addon1">
             <br>
             <label>Tipo:</label>
-            <select class="custom-select" [(ngModel)]="beneficio.tipo" name="tipo">
+            <select name="tipo" id="tipo" [(ngModel)]="beneficio.tipo" #tipo="ngModel" required class="custom-select">
                 <option value="1">Identificação</option>
                 <option value="2">Vida Funcional</option>
                 <option value="3">Contagem de Tempo</option>
@@ -25,9 +25,9 @@
             </select>
             <br>
             <label>Arquivo:</label>
-            <input type="file" [(ngModel)]="beneficio.arquivoPDF" name="arquivoPDF" (change)="fileEventChange($event)" class="form-control-file" accept=".pdf">
+            <input type="file" name="arquivoPDF" id="arquivoPDF" [(ngModel)]="beneficio.arquivoPDF" #arquivoPDF="ngModel" required (change)="fileEventChange($event)" class="form-control-file" accept=".pdf">
         </div>
-        <button type="submit" class="btn btn-primary mr-2">Salvar</button>
+        <button type="submit" class="btn btn-primary mr-2" [disabled]="!formBeneficio.valid">Salvar</button>
         <button type="button" class="btn btn-secondary" [routerLink]="['']">Cancelar</button>
     </form>
 </section>

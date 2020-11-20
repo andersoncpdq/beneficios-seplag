@@ -2,10 +2,10 @@
 <hr />
 
 <section>
-    <form (ngSubmit)="tramitar()">
+    <form #formTramite="ngForm" (ngSubmit)="tramitar()">
         <div class="form-group">
             <label>Local Origem:</label>
-            <select class="custom-select" [(ngModel)]="origem" name="origem">
+            <select class="custom-select" name="origem" id="origem" [(ngModel)]="origem" required>
                 <option value="1">Setorial Servidor</option>
                 <option value="2">Cprev Gestor</option>
                 <option value="3">Secretário Seplag</option>
@@ -14,7 +14,7 @@
             </select>
             <br>
             <label>Local Destino:</label>
-            <select class="custom-select" [(ngModel)]="destino" name="destino">
+            <select class="custom-select" name="destino" id="destino" [(ngModel)]="destino" required>
                 <option value="1">Setorial Servidor</option>
                 <option value="2">Cprev Gestor</option>
                 <option value="3">Secretário Seplag</option>
@@ -22,7 +22,7 @@
                 <option value="5">TCE - Gestor</option>
             </select>
         </div>
-        <button type="submit" class="btn btn-primary mr-2">Tramitar</button>
+        <button type="submit" class="btn btn-primary mr-2" [disabled]="!formTramite.valid">Tramitar</button>
         <button type="button" class="btn btn-secondary" [routerLink]="['']">Voltar</button>
     </form>
 </section>
@@ -30,6 +30,10 @@
 <br>
 
 <section>
+    <div *ngIf="tramites.length == 0" class="alert alert-warning" role="alert">
+        Nenhuma tramitação realizada!
+    </div>
+
     <table class="table table-striped">
         <thead>
             <tr>
