@@ -9,6 +9,8 @@ Esse projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli
 
 Execute o comando `ng serve` e navegue (preferencialmente com o Google Chrome) em `http://localhost:4200/`.
 
+Obs:. necessário instalar o pacote angular-devkit através do comando `npm install @angular-devkit/build-angular`.
+
 ## Armazenamento de Dados
 
 Para fins de simplificação, foi utilizado o `Local Storage` do próprio navegador como simulação de base de dados.
