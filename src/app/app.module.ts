@@ -1,9 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { OverlayModule } from '@angular/cdk/overlay';
-import { LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 
@@ -27,13 +24,11 @@ registerLocaleData(localePt);
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
     FormsModule,
     AppRoutingModule,
-    OverlayModule,
     NgxExtendedPdfViewerModule
   ],
-  providers: [{ provide: LOCALE_ID, useValue: 'pt-BR' } ],
+  providers: [{ provide: LOCALE_ID, useValue: 'pt-BR' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
